@@ -1,0 +1,112 @@
+ *
+ {
+    margin: 0;
+    padding: 0;
+ }
+ body{
+    background-image:url(img/pexels-sebastian-arie-voortman-189349.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    min-height: 100vh;
+ }
+ section {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     animation: floating 5s linear infinite;
+     animation-direction: alternate;
+ }
+ section h1{
+    font-size: 150px;
+    color: #fff;
+    font-family: 'Tangerine', cursive;
+    text-shadow: -9px 10px 1px #2322226b;
+    position: relative;
+ }
+ section h1::before{
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    width: 200px;
+    height: 100px;
+    border-left: 15px solid#fff;
+    border-radius: 50px;
+    background: transparent;
+    transform: rotate(-20deg);
+
+
+ }
+ @keyframes floating{
+    0%{
+        left: 49%;
+
+    }
+    25%{
+        top: 49%;
+
+    }
+    75%{
+        left: 51%;
+
+    }
+    100%{
+        top: 51%;
+
+    }
+ }
+ .Mosque{
+    background-image: url(img/mosque.png);
+    min-height: 200px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 450px;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    animation: anim 25s linear infinite;
+
+
+ }
+ .Mosque::before{
+    content: '';
+ 
+    background-image: url(img/mosque.png);
+    min-height: 200px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 550px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: .5;
+    animation: anim 25s linear infinite;
+    animation-direction: reverse;
+
+
+   
+
+
+ }
+ 
+ 
+ @keyframes anim{
+    0%{
+        background-position: -100px;
+ 
+    }
+    100%{
+        background-position: 1600px;
+
+    }
+ }
+ .particles-js-convas-el {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 80vh;
+ }
